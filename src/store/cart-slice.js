@@ -39,7 +39,7 @@ const cartSlice = createSlice({
 	},
 });
 
-const sendCartData = cart => {
+export const sendCartData = cart => {
 	return async dispatch => {
 		dispatch(
 			uiActions.showNotification({
@@ -49,7 +49,7 @@ const sendCartData = cart => {
 			})
 		);
 
-		const sendRequest = async () => {
+		 const sendRequest = async () => {
 			const response = await fetch(
 				"https://training-2d545-default-rtdb.firebaseio.com/cart.json",
 				{
